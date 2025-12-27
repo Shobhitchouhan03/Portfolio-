@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    display: none;
+}
+body{
+    color: white;
+    background-color: black;   
+    font-style: italic;
+
+}
+.fade {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: fadeUp linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.head{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.head ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+.head a{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+
+}
+.head a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+.head a:hover::after{
+    width: 100%;
+}
+.home {
+    height: 100vh;
+    background: url(./pexels-danielabsi-952670.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home_text{
+    padding-top: 200px;
+    height: 100vh;
+}
+.home h1 {
+    font-size: 3.5rem;
+    padding-left: 30px;
+}
+.home span{
+    padding-left: 30px;
+    
+}
+.home p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  padding-left: 30px;
+  color: #ccc;
+}
+
+.home_img{
+    height: 500px;
+    object-fit: contain;
+    width: 1100px;
+    border-radius: 50px;
+    margin: 90px;
+    background: url(./IMG_20250915_215742_996.webp);
+    background-size: cover;
+    background-position: center;
+
+}
+.about{
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: black;   
+}
+.about_main {
+  max-width: 800px;
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+}
+.project{
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;   
+    background: url(bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.project_heading{
+    font-size: 2rem;
+    padding-left: 80px;
+}
+.netflix{
+    height: 340px;
+    width: 300px;
+    background-position: center;
+    background-size: contain;
+    background-origin: border-box;
+    position: relative;
+
+}
+
+.netflix img{
+  height: 100%;
+  width: 100%;
+}
+/* .slidee{
+    height: 100%;
+    width: 850px;
+    display: flex;
+    overflow: hidden;
+    animation: sli linear 8s infinite;
+}
+@keyframes sli{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+} */
+.netflix span{
+    position: absolute;
+    font-style: normal;
+    top: 250px;
+    left: 40px;
+    display: none;
+    transition: all linear;
+}
+.netflix:hover span{
+    display: block;
+}
+.project_section1{
+  width: 100vw;
+  padding-left: 20px;
+  display: flex;
+  gap: 30px;
+  height: 380px; 
+}
+.section h2{
+  padding-left: 50px;
+}
+.skills {
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 20px;
+}
+.parallax-two {
+  background-image: url(./bbbg.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.co img{
+    height: 200px;
+    top: 0;
+    /* background-color: red; */
+}
+.containerr{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 750px;
+}
+.container{
+  width:90%;
+  max-width:900px;
+  height:590px;
+  display:flex;
+  border-radius:20px;
+  overflow:hidden;
+  background-image: linear-gradient(to right top, #3d4a5cb3, #43728db0, #709b9fbd, #77ad97aa, #5b6740ac);
+  backdrop-filter: blur(10%);
+  /* background:#fff; */
+}
+
+/* Left Side */
+.left{
+  width:50%;
+  /* background:url("https://wallpapers.com/images/hd/professional-background-2cmtz5pbgubk31mg.jpg") center/cover no-repeat; */
+  position:relative;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  /* background:rgba(0,0,0,0.5); */
+  color:#fff;
+  padding:60px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.overlay h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.overlay p{
+  font-size:20px;
+  line-height:1.5;
+}
+
+/* Right Side */
+.right{
+  width:50%;
+  padding:40px;
+}
+
+.right h2{
+  font-size:32px;
+  margin-bottom:30px;
+  color: black;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+input{
+  padding:14px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  font-size:16px;
+}
+
+input:focus{
+  outline:none;
+  border-color:#000;
+}
+
+.checkbox{
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+button{
+  padding:14px;
+  border:none;
+  border-radius:6px;
+  /* background:#000; */
+  color: black;
+  font-size:16px;
+  cursor:pointer;
+}
+
+button:hover{
+  opacity:0.9;
+}
+
+.or{
+  text-align:center;
+  color:#777;
+  margin:10px 0;
+}
+
+.google{
+  background:#fff;
+  color:#000;
+  border:1px solid #ccc;
+}
+
+.apple{
+  background:#000;
+  color:#fff;
+}
+
+@media (max-width: 768px) {
+  .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(30px);
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+    height: 400px;
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+  }
+  .navbar {
+    padding: 15px 30px;
+  }
+    .containerr{
+    flex-direction:column;
+    height:auto;
+    width: 850px;
+  }
+  .left,.right{
+    width:100%;
+
+  }
+  .left{
+    height:300px;
+  }
+}
+@media (max-width: 500px) {
+  .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(30px);
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+    height: 400px;
+  }
+  .about{
+    width: 850px;
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+    overflow: hidden;
+  }
+  .netflix img{
+    width: 200px;
+  }
+  .skills{
+    width: 850px;
+  }
+  .navbar {
+    padding: 15px 30px;
+  }
+    .containerr{
+    flex-direction:column;
+    height:auto;
+    width: 850px;
+  }
+  .left,.right{
+    width:100%;
+
+  }
+  .left{
+    height:300px;
+  }
+}
